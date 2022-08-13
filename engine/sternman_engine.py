@@ -1,7 +1,4 @@
-from abc import ABC
-
-from car import Car
-
+from Engine.ngine import Engine
 
 class SternmanEngine(Car, ABC):
     def __init__(self, last_service_date, warning_light_is_on):
@@ -13,3 +10,6 @@ class SternmanEngine(Car, ABC):
             return True
         else:
             return False
+
+    def needs_service(self):
+        return super().needs_service()
