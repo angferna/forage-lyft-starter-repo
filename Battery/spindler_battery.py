@@ -8,6 +8,6 @@ class SplinderBattery(battery):
 
     def needs_service(self):
         days = self.current_date - self.last_service_date
-        if(days>= 365*2):
+        if(days>= 365*3):
             return True
         return False
